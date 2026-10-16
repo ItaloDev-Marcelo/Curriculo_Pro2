@@ -1,0 +1,21 @@
+export type FormData = {
+   fullName: string,
+   email: string,
+   tel: string,
+   data: string,
+   city: string,
+   linkedin: string,
+   about: string,
+   school: string,
+   course: string,
+   startAt: string,
+   endAt: string,
+   position: string,
+   company:  string,
+   startAt1: string,
+   endAt1:  string,
+   description:  string,
+   tecs: string[],
+   soft: string[],
+   languages: string[]
+}
