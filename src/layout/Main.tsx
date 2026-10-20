@@ -4,6 +4,7 @@ import { DadosDefault,EducationDefault, ExperienceDefault, SkillsDefault } from 
 import MultStepForm from "../form/MultStepForm";
 import { zodResolver } from '@hookform/resolvers/zod';
 import {schemaMultiStepForm, type MultiStepFormData} from '../lib/SchemaMultStepForm';
+import { Resume } from '../components/Resume_Preview/Resume';
 
 const Main = () => {
   const [step, setStep] = useState(0)
@@ -26,8 +27,13 @@ const Main = () => {
     <FormProvider {...methods}>
     <main>
       <h1>Formulario simples</h1>
-        <div>
-            <MultStepForm onNextS={onNext} onBack={onBack} step={step} />
+        <div className='grid bg-blue-600 grid-cols-2 items-center place-items-center gap-2.5'>
+            <div className='bg-pink-700'>
+              <MultStepForm onNextS={onNext} onBack={onBack} step={step} />
+            </div>
+            <section className='bg-red-300 p-2 w-full h-180 xl:w-200 overflow-y-scroll overflow-x-hidden relative'>
+              <Resume/>
+            </section>
         </div>
     </main>
     </FormProvider>
