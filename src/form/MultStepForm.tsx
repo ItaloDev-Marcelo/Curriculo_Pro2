@@ -23,12 +23,6 @@ const MultStepForm = ({onNextS, onBack, step}:multiStepFormT) => {
     alert('Formulario enviado! Veja o console')
   }
 
-//   const onInvalid = (errors: FieldErrors<MultiStepFormData>) => {
-//   console.log('Erros de validação:', errors);
-//    console.log('Valores de tecs:', getValues('tecs'));
-//   console.log('Valores de soft:', getValues('soft'));
-//   console.log('Valores de languages:', getValues('languages'));
-// };
 
   return (
     <form onSubmit={methods.handleSubmit(onSubmit)}>
