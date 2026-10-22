@@ -2,7 +2,6 @@ export type FormData = {
    fullName: string,
    email: string,
    tel: string,
-   data: string,
    city: string,
    linkedin: string,
    about: string,

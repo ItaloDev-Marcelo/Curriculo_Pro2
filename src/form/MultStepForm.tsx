@@ -16,8 +16,6 @@ const MultStepForm = ({onNextS, onBack, step}:multiStepFormT) => {
     if(isValid) onNextS()
   }
 
-  
-
   const onSubmit = (data:MultiStepFormData) => {
     console.log('Dados enviados:',data)
     alert('Formulario enviado! Veja o console')
