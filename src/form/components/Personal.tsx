@@ -1,4 +1,3 @@
-// import React from 'react'
 import InputBlock from '../../components/InputBlock'
 import { useFormContext } from 'react-hook-form'
 import TextareaBlock from '../../components/TextareaBlock'
@@ -24,12 +23,9 @@ export const Personal = ({onNextS}: NextT) => {
 
          </div>
 
-          <div className='flex flex-col xl:flex-row xl:gap-5'>
-             <InputBlock errors={errors} register={register} title='Data de nascimento '  name='data'  placeholder=''  style='my-2 xl:w-[50%]' type='date' />
+        
+         <InputBlock errors={errors} register={register} title='Cidade' name='city'  placeholder='São Paula, Sp'  style='my-2 ' type='text'/>
 
-         <InputBlock errors={errors} register={register} title='Cidade' name='city'  placeholder='São Paula, Sp'  style='my-2 xl:w-[50%]' type='text'/>
-
-         </div>
 
          <InputBlock errors={errors} register={register} title='Linkedin (Opcional)'  name='linkedin'  placeholder='linkedin.com/in/Usuario'  style='my-2 xl:w-full' type='text' />
 
