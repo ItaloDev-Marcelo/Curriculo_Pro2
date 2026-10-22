@@ -22,7 +22,7 @@ export const ResumeHeader = () => {
    const LetterResult = HeaderData.fullName.length == 0 ? 'Curriculo Pro' : HeaderData.fullName
 
   return (
-    <div className="border-b border-b-2 pb-2.5 border-gray-500 ">
+    <div className="border-b-2 pb-2.5 border-gray-500 ">
         <div className="flex flex-row items-center px-10 py-7">
             <div className='w-25 h-25 bg-blue-700 text-center content-center rounded-full text-white'>
                  <p className="text-[1.7em]">{CreateLogo(LetterResult)}</p>
