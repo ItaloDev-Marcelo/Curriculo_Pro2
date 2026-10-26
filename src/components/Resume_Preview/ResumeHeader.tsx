@@ -28,7 +28,7 @@ export const ResumeHeader = () => {
                  <p className="text-[1.7em]">{CreateLogo(LetterResult)}</p>
             </div>
            <div className='ml-5'>
-            <h1 className='font-bold text-gray-700'>{HeaderData.fullName}</h1>
+            <h2 className='font-bold text-gray-700'>{HeaderData.fullName}</h2>
             <p className='font-semibold text-gray-600'>{HeaderData.position}</p>
            </div>
         </div>
