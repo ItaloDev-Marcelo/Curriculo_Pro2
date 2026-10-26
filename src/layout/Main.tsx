@@ -7,6 +7,7 @@ import {schemaMultiStepForm, type MultiStepFormData} from '../lib/SchemaMultStep
 import { Resume } from '../components/Resume_Preview/Resume';
 import { RowSteps } from '../components/RowSteps';
 import { InformationHeader } from '../components/InformationHeader';
+import { HeaderBlock } from '../components/HeaderBlock';
 
 const Main = () => {
   const [step, setStep] = useState(0)
@@ -53,11 +54,11 @@ const Main = () => {
 
   return (
     <FormProvider {...methods}>
-    <main>
-      <h1>Formulario simples</h1>
-        <div className='grid  grid-cols-2 items-center place-items-center gap-2.5'>
-            <div className=''>
-              <div className='my-5'>
+    <main className='flex flex-col  gap-2 p-2.5 w-[80%] h-screen '>
+        <HeaderBlock />
+        <div className='grid  grid-cols-2 mt-7 items-center place-content-center gap-2.5'>
+            <div className='bg-blue-200 rounded-md w-full '>
+              <div className='m-5 pl-2.5'>
                 <RowSteps step={step}/>
                 {
                  StepsInformation.map((item,index) => (
@@ -65,9 +66,15 @@ const Main = () => {
                  )) 
                 }
                 </div>
-              <MultStepForm onNextS={onNext} onBack={onBack} step={step} />
+              <div className='mx-6'>
+                 <MultStepForm onNextS={onNext} onBack={onBack} step={step} />
+              </div>
             </div>
-            <section className=' p-2 w-full h-180 xl:w-200 overflow-y-scroll overflow-x-hidden relative'>
+            <section className=' p-4.5 w-full bg-blue-200 rounded-md h-175 xl:w-full overflow-y-scroll overflow-x-hidden relative flex flex-col items-start'>
+              <div>
+                <h3><span className='text-green-500 mr-2'>⬤</span> Preview Currículo</h3>
+                <p>Atualização em tempo real</p>
+              </div>
               <Resume/>
             </section>
         </div>
