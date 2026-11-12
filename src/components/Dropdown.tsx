@@ -18,7 +18,7 @@ const Dropdown = ({errors,register,name,options}:dropdownType) => {
 
 
   return (
-    <div className="dropdown w-full">
+    <div className="dropdown w-full relative">
       <button type='button' tabIndex={0} className='btn w-full justify-between'>
         {
           selected.length > 0 ? `${selected.length} selecionadas` : 'Selecione as tecnologias'
@@ -26,7 +26,7 @@ const Dropdown = ({errors,register,name,options}:dropdownType) => {
         <span>⌄</span>
       </button>
 
-      <ul tabIndex={0} className='dropdown-content menu z-10 mt-2 w-full rounded-box bg-base-100 p-2 shadow'>
+      <ul tabIndex={0} className='dropdown-content menu z-10 mt-2 w-full rounded-box bg-base-100 p-2 shadow scroll-y-auto h-50'>
       {options.map((option) => {
   const field = register(name);
 
@@ -50,7 +50,7 @@ const Dropdown = ({errors,register,name,options}:dropdownType) => {
   );
 })}
       </ul>
-      {errors[name] && <span className='text-red-700'>{errors[name].message}</span>}
+      {errors[name] && <span className='text-red-700 absolute top-12 left-0'>{errors[name].message}</span>}
     </div>
   )
 }

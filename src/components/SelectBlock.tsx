@@ -4,7 +4,7 @@ type SelectedBlockT = reusableType & selectBlock
 
 const SelectBlock = ({errors,register,name, placeholder,options,isMultiple}:SelectedBlockT) => {
   return (
-    <div className='w-[50%]'>
+    <div className='w-[50%] '>
                           <select multiple={isMultiple} className="select" {...register(name)}  defaultValue={ isMultiple ? [] : ''}>
                             <option disabled={true}>{placeholder}</option>
                             {
