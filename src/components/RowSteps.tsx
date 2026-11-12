@@ -3,7 +3,7 @@ import { stepsData } from "../consts/steps"
 export const RowSteps = ({step}:{step: number}) => {
 
   return (
-  <ul className=" w-[60%] xl:w-full flex flex-row">
+  <ul className=" w-[60%]  py-2.5 xl:w-full flex flex-row">
   {
     stepsData.map((item,index) => (
          <li key={index} className="flex  flex-row items-center pr-4.5 xl:pr-4.5" >
