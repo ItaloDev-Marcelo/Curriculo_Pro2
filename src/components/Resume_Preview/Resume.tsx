@@ -13,7 +13,7 @@ export const Resume = () => {
   return (
     <>
       {
-        FormOn.fullName !== '' && <section className="bg-white mx-auto w-148.75 my-5 shadow-2xl ">
+        FormOn.fullName !== '' && <section className="bg-white mx-auto w-full my-5 shadow-2xl ">
         <ResumeHeader/>
         <div className='px-5 pt-7'>
         <ResumeAbout/>

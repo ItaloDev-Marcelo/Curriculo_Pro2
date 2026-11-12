@@ -24,10 +24,10 @@ const MultStepForm = ({onNextS, onBack, step}:multiStepFormT) => {
 
   return (
     <form onSubmit={methods.handleSubmit(onSubmit)}>
-       {step === 0 && <Personal onNextS={() => next([...camposPorStep[0]])} /> }
-       {step === 1 && <Education onBack={onBack} onNextS={() => next([...camposPorStep[1]])} /> }
-       {step === 2 && <Experience onBack={onBack} onNextS={() => next([...camposPorStep[2]])} /> }
-       {step === 3 && <Skills onBack={onBack} onNextS={() => next([...camposPorStep[3]])} /> }
+       {step === 1 && <Personal onNextS={() => next([...camposPorStep[0]])} /> }
+       {step === 2 && <Education onBack={onBack} onNextS={() => next([...camposPorStep[1]])} /> }
+       {step === 3 && <Experience onBack={onBack} onNextS={() => next([...camposPorStep[2]])} /> }
+       {step === 4 && <Skills onBack={onBack} onNextS={() => next([...camposPorStep[3]])} /> }
     </form>
   )
 }

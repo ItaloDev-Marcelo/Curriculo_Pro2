@@ -8,6 +8,7 @@ export type reusableType = {
     title?: string,
     name: keyof MultiStepFormData,
     placeholder?: string,
+    errorStyle?: string
 }
  
 type onlyToInputType = {
