@@ -12,19 +12,19 @@ const Skills = ({onNextS,onBack}:Both) => {
   const {register, formState: {errors}} = useFormContext<MultiStepFormData>()
 
   return (
-    <div className=" p-2 w-full  xl:w-150 ">
-         <div className='flex flex-col w-full my-4.5'>
-                 <label className='py-2 text-[#58667a]'>Tecnologias <span className='text-red-700'>*</span></label> 
+    <div className=" p-2 w-full  xl:w-150 relative -top-5 ">
+         <div className='flex flex-col w-full my-4.5 py-3'>
+                 <label className='py-2 text-black'>Tecnologias <span className='text-red-700'>*</span></label> 
                  <Dropdown errors={errors} register={register} name='tecs' options={tecSkills} />
                </div>   
 
-               <div className='flex flex-col w-full my-4.5'>
-                 <label className='py-2 text-[#58667a]'>Soft Skills <span className='text-red-700'>*</span></label> 
+               <div className='flex flex-col w-full my-4.5 py-3'>
+                 <label className='py-2 text-black'>Soft Skills <span className='text-red-700'>*</span></label> 
                  <Dropdown errors={errors} register={register} name='soft' options={softSkills} />
                </div>
 
-               <div className='flex flex-col w-full my-4.5'>
-                 <label className='py-2 text-[#58667a]'>Idiomas <span className='text-red-700'>*</span></label> 
+               <div className='flex flex-col w-full my-4.5 py-3'>
+                 <label className='py-2 text-black'>Idiomas <span className='text-red-700'>*</span></label> 
                  <Dropdown errors={errors} register={register} name='languages' options={languages} />
                </div>
 
