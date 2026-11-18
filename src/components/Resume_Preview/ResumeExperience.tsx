@@ -22,7 +22,7 @@ export const ResumeExperience = () => {
             <div className="pl-11 py-5">
                 <h3 className='font-semibold'>{ExperienceData.position}</h3>
                 <p className='font-semibold text-gray-700'>{ExperienceData.company} {ExperienceData.startAt1 && '|'}   <span>{ExperienceData.startAt1}</span> {ExperienceData.startAt1 && "-"}<span>{ExperienceData.endAt1}</span></p>
-                <p className="w-[65%] text-gray-800">{ExperienceData.description}</p>
+                <p className="w-full text-gray-800">{ExperienceData.description}</p>
             </div>
     </div>
   )

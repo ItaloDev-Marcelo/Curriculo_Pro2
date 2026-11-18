@@ -12,20 +12,21 @@ const Skills = ({onNextS,onBack}:Both) => {
   const {register, formState: {errors}} = useFormContext<MultiStepFormData>()
 
   return (
-    <div className=" p-2 w-full  xl:w-150 relative -top-5 ">
-         <div className='flex flex-col w-full my-4.5 py-3'>
+    <div className=" p-2 w-full  xl:w-120 relative -top-6 ">
+         <div className='flex flex-col w-full my-2.5 py-3'>
                  <label className='py-2 text-black'>Tecnologias <span className='text-red-700'>*</span></label> 
-                 <Dropdown errors={errors} register={register} name='tecs' options={tecSkills} />
+                 <Dropdown errors={errors} register={register} name='tecs' options={tecSkills} h='h-70' />
                </div>   
 
-               <div className='flex flex-col w-full my-4.5 py-3'>
+               <div className='flex flex-col w-full my-2.5 py-3'>
                  <label className='py-2 text-black'>Soft Skills <span className='text-red-700'>*</span></label> 
-                 <Dropdown errors={errors} register={register} name='soft' options={softSkills} />
+                 <Dropdown errors={errors} register={register} name='soft' options={softSkills} h='h-50' />
                </div>
 
-               <div className='flex flex-col w-full my-4.5 py-3'>
+               <div className='flex flex-col w-full mt-2.5 mb-6 py-3'>
                  <label className='py-2 text-black'>Idiomas <span className='text-red-700'>*</span></label> 
-                 <Dropdown errors={errors} register={register} name='languages' options={languages} />
+                 <Dropdown errors={errors} register={register} name='languages' options={languages} 
+                 h='h-30' />
                </div>
 
                <ButtonsContainer>

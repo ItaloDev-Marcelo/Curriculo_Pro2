@@ -22,8 +22,8 @@ export const ResumeHeader = () => {
    const LetterResult = HeaderData.fullName.length == 0 ? 'Curriculo Pro' : HeaderData.fullName
 
   return (
-    <div className="border-b-2 pb-2.5 border-gray-500 ">
-        <div className="flex flex-row items-center px-10 py-7">
+    <div className="border-b-2 pb-2.5 border-gray-500 scale-80 ">
+        <div className="flex flex-row items-center pr-5 py-10">
             <div className='w-25 h-25 bg-blue-700 text-center content-center rounded-full text-white'>
                  <p className="text-[1.7em]">{CreateLogo(LetterResult)}</p>
             </div>
@@ -32,7 +32,7 @@ export const ResumeHeader = () => {
             <p className='font-semibold text-gray-600'>{HeaderData.position}</p>
            </div>
         </div>
-        <div className='flex flex-row flex-wrap gap-2.5 pl-5 w-[80%]  items-center justify-between'>
+        <div className='flex flex-row flex-wrap gap-2.5 pl-2.5 pb-5 w-[100%]  items-center justify-between'>
            { HeaderData.email && <div className='flex flex-row items-center content-center'>
                 <MdOutlineMail size={30} />
                 <p className='pl-2.5'>{HeaderData.email}</p>

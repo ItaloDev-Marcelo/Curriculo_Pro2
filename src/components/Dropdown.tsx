@@ -1,11 +1,11 @@
 import {useState} from 'react'
 import type { reusableType } from './types/Inputs'
 
-type dropdownT = {options: string[]}
+type dropdownT = {options: string[], h: string}
 
 type dropdownType = reusableType & dropdownT
 
-const Dropdown = ({errors,register,name,options}:dropdownType) => {
+const Dropdown = ({errors,register,name,options,h}:dropdownType) => {
     const [selected, setSelected] = useState<string[]>([])
 
     const toggle = (value: string) => {
@@ -23,16 +23,17 @@ const Dropdown = ({errors,register,name,options}:dropdownType) => {
         {
           selected.length > 0 ? `${selected.length} selecionadas` : 'Selecione as tecnologias'
         }
-        <span>⌄</span>
+        <span>▽</span>
       </button>
 
-      <ul tabIndex={0} className='dropdown-content menu z-10 mt-2 w-full rounded-box bg-base-100 p-2 shadow scroll-y-auto h-50'>
+      <ul tabIndex={0} className={`dropdown-content menu z-10 mt-2
+       w-full rounded-box bg-base-100 p-2 shadow scroll-y-auto  ${h}`}>
       {options.map((option) => {
   const field = register(name);
 
   return (
     <li key={option}>
-      <label className="flex cursor-pointer items-center gap-2.5">
+      <label className="flex cursor-pointer items-center  gap-2">
         <input
           type="checkbox"
           className="checkbox"

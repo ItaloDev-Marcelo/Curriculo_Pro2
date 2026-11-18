@@ -14,20 +14,23 @@ const Experience = ({onNextS,onBack}:Both) => {
     
 
   return (
-    <div className=' p-2 w-full  xl:w-150 relative -top-5 '>
-      <InputBlock errors={errors} register={register} title='Cargo'  name='position'  placeholder='Desenvolvedor Front-end, jr'  type='text' style='py-2.5' errorStyle="top-20"  />
+    <div className=' p-2 w-full  xl:w-120 relative -top-5 '>
+      <InputBlock errors={errors} register={register} title='Cargo'  name='position'
+        placeholder='Desenvolvedor Front-end, jr'  type='text' style='py-1.3' errorStyle="top-20"  />
 
-      <InputBlock errors={errors} register={register} title='Empresa'  name='company'  placeholder='Empresa: exemplo'  type='text' style='py-2.5' errorStyle="top-20"  />
+      <InputBlock errors={errors} register={register} title='Empresa'
+        name='company'  placeholder='Empresa: exemplo'  type='text' style='py-1.5' errorStyle="top-20"  />
 
-      <div className="flex flex-col my-2">
-              <label className='py-2 text-black'>Periodo <span className='text-red-700'>*</span></label>
+      <div className="flex flex-col my-.5">
+              <label className='py-1 text-black'>Periodo <span className='text-red-700'>*</span></label>
               <div className='flex flex-row gap-2.5'>
                 <SelectBlock errors={errors} register={register} name='startAt1'  placeholder='2001' isMultiple={false} options={years} />
                 <SelectBlock errors={errors} register={register} name='endAt1'  placeholder='2026' isMultiple={false} options={years} />
               </div>
       </div>
 
-      <TextareaBlock errors={errors} register={register} title='Descrição'  name='description'  placeholder='Bio:' />
+      <TextareaBlock errors={errors} register={register} title='Descrição'  name='description'
+        placeholder='Bio:' />
       <ButtonsContainer>
       <ButtonBack back={() => onBack(1)} />
       <ButtonNext type='button'  next={onNextS}/>

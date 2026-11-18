@@ -76,13 +76,13 @@ const Main = () => {
 
   return (
     <FormProvider {...methods}>
-    <main className='flex flex-col  gap-2 p-2.5 w-[80%] bg-[#fbfcfe] h-screen '>
+    <main className='flex flex-col  gap-2 p-2.5 w-[80%] bg-[#fbfcfe]  '>
         <HeaderBlock />
-        <div className='grid  grid-cols-2 mt-7  items-center place-content-center gap-2.5'>
-            <div className='bg-[#fefefe] border-gray-200 border rounded-md w-full h-175  '>
+        <div className='grid  grid-cols-2 mt-2.5  items-center place-content-center gap-2.5'>
+            <div className='bg-[#fefefe] border-gray-200 border rounded-md w-full h-150  '>
               <div className='m-5 pl-2.5 '>
                 <RowSteps step={step}/>
-                <div className='w-[92%] h-2.5 relative top-2 rounded-md bg-gray-200'> 
+                <div className='w-[95%] h-2.5 relative top-2 rounded-md bg-gray-200'> 
                   <div className={`bg-[#1061de]  ${movingStepBar(step)} h-2.5 rounded-md`}></div>
                 </div>
                 {
@@ -96,7 +96,8 @@ const Main = () => {
                  <MultStepForm onNextS={onNext} onBack={onBack} step={step} />
               </div>
             </div>
-            <section className=' p-4.5 w-full border-gray-200 border bg-[#fefefe] rounded-md h-175 xl:w-full overflow-y-scroll overflow-x-hidden relative flex flex-col items-start'>
+            <section className=' p-4.5 w-full border-gray-200 border bg-[#fefefe] rounded-md h-150 
+            xl:w-full  overflow-auto relative flex flex-col items-start'>
               <div>
                 <h3 className='font-bold'><span className='text-green-500 mr-2'>⬤</span> Preview Currículo</h3>
                 <p className='font-semibold mt-2'>Atualização em tempo real</p>
